@@ -1,0 +1,242 @@
+/* === Базові стилі === */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* === Хедер === */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 0 24px;
+  height: 64px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.file-options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-options select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.upload-btn {
+  background: #007bff;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.upload-btn:hover {
+  background: #005fd1;
+}
+
+.upload-btn input {
+  display: none;
+}
+
+/* === Основний робочий простір === */
+.workspace {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  background: #f8f9fb;
+}
+
+/* === Ліва панель === */
+.sidebar {
+  width: 280px;
+  background: #ffffff;
+  border-right: 1px solid #e3e3e3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  margin: 0;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-section input[type="text"],
+.form-section input[type="file"] {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.hint {
+  font-size: 13px;
+  color: #777;
+  margin-top: 8px;
+}
+
+/* === Права частина === */
+.editor-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+/* === Сцена редактора === */
+.editor-canvas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  max-width: 950px;
+}
+
+.stage-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.editor-controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.editor-controls .buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.editor-controls button {
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.editor-controls button.save-btn {
+  background: #2563eb;
+  color: #fff;
+}
+
+.editor-controls button.save-btn:hover {
+  background: #1e40af;
+}
+
+.editor-controls button.reset-btn {
+  background: #f3f4f6;
+  color: #333;
+}
+
+.editor-controls button.reset-btn:hover {
+  background: #e5e7eb;
+}
+
+.editor-controls span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* === Підпис === */
+.signature-pad {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.signature-pad canvas {
+  display: block;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.signature-pad .buttons {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.signature-pad .buttons button {
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.signature-pad .buttons .save-btn {
+  background: #2563eb;
+  color: #fff;
+}
+
+.signature-pad .buttons .save-btn:hover {
+  background: #1e40af;
+}
+
+.signature-pad .buttons .clear-btn {
+  background: #f3f4f6;
+  color: #333;
+}
+
+.signature-pad .buttons .clear-btn:hover {
+  background: #e5e7eb;
+}
+
+/* === Порожній стан === */
+.empty-state {
+  color: #999;
+  font-size: 16px;
+  text-align: center;
+}
